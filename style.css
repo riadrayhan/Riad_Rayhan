@@ -974,6 +974,8 @@ body:hover .cursor-follower {
 .skill-icon.aws { background: #fff3e0; color: #FF9900; }
 .skill-icon.github { background: #f5f5f5; color: #181717; }
 .skill-icon.cicd { background: #e8f5e9; color: #00C853; }
+.skill-icon.vercel { background: #f5f5f5; color: #000000; }
+.skill-icon.netlify { background: #e3f2f1; color: #00C7B7; }
 
 [data-theme="dark"] .skill-icon {
     background: var(--bg-tertiary);
