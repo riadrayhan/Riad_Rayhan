@@ -709,6 +709,15 @@ body:hover .cursor-follower {
 
 .card-flutter i { color: #02569B; }
 
+.card-java {
+    top: 60px;
+    left: -30px;
+    color: #f89820;
+    animation-delay: -0.5s;
+}
+
+.card-java i { color: #f89820; }
+
 .card-python {
     bottom: 60px;
     left: -40px;
