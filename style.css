@@ -1167,6 +1167,144 @@ body:hover .cursor-follower {
 }
 
 /* ==========================================
+   LIVE APPS SECTION
+   ========================================== */
+.live-apps {
+    padding: var(--section-padding);
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 32px;
+}
+
+.app-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.app-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+}
+
+.app-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.app-card:hover::before {
+    transform: scaleX(1);
+}
+
+.app-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--primary-glow), rgba(6, 182, 212, 0.2));
+    flex-shrink: 0;
+}
+
+.app-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app-icon-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.app-info {
+    flex: 1;
+}
+
+.app-name {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.app-developer {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-bottom: 12px;
+}
+
+.app-description {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.app-meta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.app-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8125rem;
+    color: var(--text-tertiary);
+}
+
+.app-meta i {
+    color: var(--primary);
+}
+
+.app-download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #01875f, #00a67e);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    transition: all var(--transition-normal);
+}
+
+.app-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(1, 135, 95, 0.3);
+}
+
+.app-download-btn i {
+    font-size: 1.25rem;
+}
+
+/* ==========================================
    CONTACT SECTION
    ========================================== */
 .contact {
@@ -1554,6 +1692,10 @@ body:hover .cursor-follower {
     }
     
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .apps-grid {
         grid-template-columns: 1fr;
     }
     
