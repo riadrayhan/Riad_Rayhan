@@ -702,16 +702,16 @@ body:hover .cursor-follower {
 }
 
 .card-flutter {
-    top: 20px;
-    right: -20px;
+    top: 10px;
+    right: -30px;
     color: #02569B;
 }
 
 .card-flutter i { color: #02569B; }
 
 .card-java {
-    top: 60px;
-    left: -30px;
+    top: 100px;
+    left: -50px;
     color: #f89820;
     animation-delay: -0.5s;
 }
@@ -719,7 +719,7 @@ body:hover .cursor-follower {
 .card-java i { color: #f89820; }
 
 .card-python {
-    bottom: 60px;
+    bottom: 100px;
     left: -40px;
     color: #3776AB;
     animation-delay: -1s;
@@ -728,8 +728,8 @@ body:hover .cursor-follower {
 .card-python i { color: #3776AB; }
 
 .card-ai {
-    bottom: -20px;
-    right: 40px;
+    bottom: 10px;
+    right: -20px;
     color: var(--primary);
     animation-delay: -2s;
 }
