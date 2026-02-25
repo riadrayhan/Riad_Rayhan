@@ -1172,9 +1172,17 @@ body:hover .cursor-follower {
     gap: 12px;
 }
 
+.project-card.limit-hidden {
+    display: none;
+}
+
 .projects-more {
     text-align: center;
     margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 /* ==========================================

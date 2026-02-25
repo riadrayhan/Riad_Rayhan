@@ -219,10 +219,25 @@ skillBars.forEach(bar => {
 });
 
 // ==========================================
-// PROJECT FILTER
+// PROJECT FILTER (limit to 10 visible)
 // ==========================================
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
+const MAX_VISIBLE_PROJECTS = 10;
+
+function applyProjectLimit() {
+    const visibleCards = document.querySelectorAll('.project-card:not(.hidden)');
+    visibleCards.forEach((card, index) => {
+        if (index >= MAX_VISIBLE_PROJECTS) {
+            card.classList.add('limit-hidden');
+        } else {
+            card.classList.remove('limit-hidden');
+        }
+    });
+}
+
+// Initial limit on page load
+applyProjectLimit();
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -234,6 +249,7 @@ filterBtns.forEach(btn => {
         
         projectCards.forEach(card => {
             const category = card.getAttribute('data-category');
+            card.classList.remove('limit-hidden');
             
             if (filter === 'all' || category === filter) {
                 card.classList.remove('hidden');
@@ -242,6 +258,9 @@ filterBtns.forEach(btn => {
                 card.classList.add('hidden');
             }
         });
+
+        // Re-apply limit after filtering
+        applyProjectLimit();
     });
 });
 
