@@ -940,16 +940,48 @@ body:hover .cursor-follower {
 }
 
 .skill-items {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
 
 .skill-item {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
     align-items: center;
-    gap: 16px;
+    gap: 8px 12px;
+    padding: 12px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.skill-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.skill-item .skill-icon {
+    grid-row: 1 / span 2;
+}
+
+.skill-item .skill-bar {
+    grid-column: 2;
+    max-width: 100%;
+}
+
+@media (max-width: 900px) {
+    .skill-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .skill-items {
+        grid-template-columns: 1fr;
+    }
 }
 
 .skill-icon {
