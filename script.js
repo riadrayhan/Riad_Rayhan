@@ -241,12 +241,21 @@ applyProjectLimit();
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Special case: jump to the Live Apps section
+        if (filter === 'live-apps') {
+            const liveAppsSection = document.getElementById('live-apps');
+            if (liveAppsSection) {
+                liveAppsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+            return;
+        }
+
         // Update active button
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        
-        const filter = btn.getAttribute('data-filter');
-        
+
         projectCards.forEach(card => {
             const category = card.getAttribute('data-category');
             card.classList.remove('limit-hidden');
