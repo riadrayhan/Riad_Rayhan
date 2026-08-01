@@ -237,6 +237,72 @@ const projectsData = [
         btnUrl: 'https://github.com/riadrayhan/Asthma-TB_Detection',
         btnText: 'View Project'
     },
+    {
+        featured: true,
+        category: 'java',
+        image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600&h=400&fit=crop',
+        alt: 'RR IPTV Player - Android IPTV App',
+        tags: ['Kotlin', 'Jetpack Compose', 'Media3/ExoPlayer', 'Room'],
+        title: 'RR IPTV Player',
+        description: `A native Android IPTV app (Kotlin + Jetpack Compose) that plays M3U/M3U8 playlists via
+            AndroidX Media3/ExoPlayer — HLS + DASH, cross-protocol redirect handling, custom headers, and
+            ClearKey DRM parsed straight from #KODIPROP tags. Includes EPG program matching, favorites,
+            recently-watched, category filtering, and WorkManager-driven background playlist refresh, with
+            a full-screen player featuring a collapsible channel sidebar and Picture-in-Picture support.`,
+        overlay: [{ type: 'github', url: 'https://github.com/riadrayhan/RR-IPTV-Player' }],
+        btnUrl: 'https://github.com/riadrayhan/RR-IPTV-Player',
+        btnText: 'View Project'
+    },
+    {
+        featured: true,
+        category: 'fullstack',
+        image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=400&fit=crop',
+        alt: 'Dress Collections - AI Garment Design Studio and Virtual Try-On',
+        tags: ['React', 'Node.js', 'FastAPI', 'MongoDB'],
+        title: 'Dress Collections — AI Garment Studio',
+        description: `An enterprise internal tool for the garments sector: admins compose a dress (category →
+            subcategory → color → style → attributes), an AI service generates the garment image, and a
+            Virtual Try-On studio renders it on an uploaded photo. Three coordinated services — a
+            React/Vite admin panel, a Node/Express/Mongoose API with JWT auth, and a Python/FastAPI AI
+            orchestrator — with free-tier provider fallback chains (Hugging Face → Pollinations for
+            generation, two HF Spaces for try-on).`,
+        overlay: [{ type: 'github', url: 'https://github.com/riadrayhan/Dress-Collections' }],
+        btnUrl: 'https://github.com/riadrayhan/Dress-Collections',
+        btnText: 'View Project'
+    },
+    {
+        featured: true,
+        category: 'flutter',
+        image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=400&fit=crop',
+        alt: 'AutoCad 3D - Mini 3D Scene Builder',
+        tags: ['Flutter', 'Custom 3D Renderer', 'Provider', 'CustomPainter'],
+        title: 'AutoCad 3D',
+        description: `A from-scratch 3D CAD/scene builder in Flutter — no external 3D engine, just a custom orbit
+            camera, mesh math (Vec3/Mesh), and a CustomPainter renderer. Place library objects by category
+            with yaw/scale "stamping", orbit/pan/zoom/move tools, wireframe and grid-snap toggles, an
+            object outliner with undo/redo, and scene save/load — all driven through a single
+            ChangeNotifier provider.`,
+        overlay: [{ type: 'github', url: 'https://github.com/riadrayhan/AutoCad-3D' }],
+        btnUrl: 'https://github.com/riadrayhan/AutoCad-3D',
+        btnText: 'View Project'
+    },
+    {
+        featured: true,
+        category: 'java',
+        image: 'https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=600&h=400&fit=crop',
+        alt: 'APK Workbench - Android APK Decompiler and Rebuilder',
+        tags: ['Kotlin', 'Android', 'APK Decompiler', 'AI Agent'],
+        title: 'APK Workbench',
+        description: `An Android app for opening an APK into an app-private, editable workspace — decodes
+            classes.dex to smali and binary resources (manifest, layouts, resources.arsc) to editable UTF-8
+            text, lets you edit them, then reassembles and re-signs a rebuilt APK with Zip Slip protection
+            and 16 KiB native-lib alignment. Includes an in-app AI code agent (bring-your-own OpenAI/Gemini/
+            Groq key) that proposes smali/resource edits from a plain-language request and shows a diff for
+            review before anything is written.`,
+        overlay: [],
+        btnUrl: null,
+        btnText: 'Private Project'
+    },
 
     // ----- More projects -----
     {
