@@ -299,9 +299,42 @@ const projectsData = [
             and 16 KiB native-lib alignment. Includes an in-app AI code agent (bring-your-own OpenAI/Gemini/
             Groq key) that proposes smali/resource edits from a plain-language request and shows a diff for
             review before anything is written.`,
-        overlay: [],
-        btnUrl: null,
-        btnText: 'Private Project'
+        overlay: [{ type: 'github', url: 'https://github.com/riadrayhan/APK-Extractor' }],
+        btnUrl: 'https://github.com/riadrayhan/APK-Extractor',
+        btnText: 'View Project'
+    },
+    {
+        featured: true,
+        category: 'ml',
+        image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop',
+        alt: 'Bio-Marker - Digital Biomarker Mental Health Monitor',
+        tags: ['Kotlin', 'TensorFlow Lite', 'Passive Sensing', 'Groq LLM'],
+        title: 'Bio-Marker — Digital Mental Health Monitor',
+        description: `A native Android app that turns passive phone signals into mental-wellbeing insights —
+            motion, steps, walk bouts, sleep inference, typing rhythm (via a custom keyboard), voice
+            features, call and app-usage patterns, and camera-PPG heart rate. An on-device TensorFlow Lite
+            model estimates a PHQ-9-style risk score (with a heuristic fallback), backed by anomaly
+            detection, weekly clustering, stress nudges, and WorkManager pipelines. A Groq LLM writes
+            daily summaries from aggregate numbers only, and the Python training pipeline ships in the repo.`,
+        overlay: [{ type: 'github', url: 'https://github.com/riadrayhan/Bio-Marker' }],
+        btnUrl: 'https://github.com/riadrayhan/Bio-Marker',
+        btnText: 'View Project'
+    },
+    {
+        featured: true,
+        category: 'fullstack',
+        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop',
+        alt: 'Localhost Live - Share localhost as a Public HTTPS Link',
+        tags: ['Node.js', 'Express', 'Cloudflare Tunnel', 'WebSocket'],
+        title: 'Localhost Live — localhost to Public URL',
+        description: `A self-hosted ngrok alternative: paste localhost:3000 into a local web panel and get a
+            public HTTPS link in seconds, with Copy / QR / Share. It auto-downloads cloudflared and supports
+            three providers — free Cloudflare Quick Tunnels, permanent subdomains on your own domain via
+            Named Tunnels, and a self-hosted WebSocket relay. WebSocket/HMR, uploads, and POST all pass
+            through, and the Express + SSE panel has CSRF guards and end-to-end tests.`,
+        overlay: [{ type: 'github', url: 'https://github.com/riadrayhan/localhost-to-live-url' }],
+        btnUrl: 'https://github.com/riadrayhan/localhost-to-live-url',
+        btnText: 'View Project'
     },
 
     // ----- More projects -----
@@ -476,30 +509,6 @@ const projectsData = [
     {
         featured: false,
         category: 'flutter',
-        image: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=600&h=400&fit=crop',
-        alt: 'Riad Live TV',
-        tags: ['Flutter', 'Live Streaming', 'IPTV'],
-        title: 'Riad Live TV',
-        description: `Live TV streaming app offering 20+ channels from 12+ countries worldwide. Watch live news, entertainment, and sports on the go.`,
-        overlay: [{ type: 'github', url: 'https://github.com/riadrayhan/Riad_Live_TV' }],
-        btnUrl: 'https://github.com/riadrayhan/Riad_Live_TV',
-        btnText: 'View Project'
-    },
-    {
-        featured: false,
-        category: 'flutter',
-        image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop',
-        alt: 'Tax Calculator',
-        tags: ['Flutter', 'Dart', 'Finance'],
-        title: 'Tax Calculator',
-        description: `A clean, intuitive Flutter application for calculating taxes quickly and accurately. Simple inputs, instant results.`,
-        overlay: [{ type: 'github', url: 'https://github.com/riadrayhan/TaxCalculator' }],
-        btnUrl: 'https://github.com/riadrayhan/TaxCalculator',
-        btnText: 'View Project'
-    },
-    {
-        featured: false,
-        category: 'flutter',
         image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop',
         alt: 'r_container Flutter Package',
         tags: ['Flutter', 'Open Source', 'Package'],
@@ -555,18 +564,6 @@ const projectsData = [
         description: `A real-time video calling application built in Flutter featuring peer-to-peer audio/video, mute controls, and a clean UI.`,
         overlay: [{ type: 'github', url: 'https://github.com/riadrayhan/Video_Calling_App' }],
         btnUrl: 'https://github.com/riadrayhan/Video_Calling_App',
-        btnText: 'View Project'
-    },
-    {
-        featured: false,
-        category: 'ml',
-        image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop',
-        alt: 'Secret Data Protected',
-        tags: ['ML', 'Security', 'Encryption'],
-        title: 'Secret Data Protected',
-        description: `A Machine Learning–based approach to securing sensitive data with intelligent protection and access control layers.`,
-        overlay: [{ type: 'github', url: 'https://github.com/riadrayhan/Secret-Data-Protected' }],
-        btnUrl: 'https://github.com/riadrayhan/Secret-Data-Protected',
         btnText: 'View Project'
     },
     {
