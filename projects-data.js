@@ -8,6 +8,23 @@ const projectsData = [
     {
         featured: true,
         category: 'ml',
+        badge: { label: 'AI Agent', icon: 'fas fa-robot' },
+        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&h=400&fit=crop',
+        alt: 'Battle Arena - AI Agent Competition with a 3D Arena',
+        tags: ['AI Agent', 'Python', 'FastAPI', 'three.js'],
+        title: 'Battle Arena — AI Agent Competition',
+        description: `A Kaggle-style competition for AI agents: write a Python agent that builds a 3-fighter squad
+            and picks every move from a fog-of-war observation, push it, and a 3v3 match starts instantly
+            in a procedurally generated three.js arena. Seeded, fully replayable matches make it a real RL
+            environment. FastAPI + PostgreSQL + Celery, with untrusted agent code run in a locked-down
+            Docker sandbox.`,
+        overlay: [],
+        btnUrl: null,
+        btnText: 'Private Project'
+    },
+    {
+        featured: true,
+        category: 'ml',
         image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600&h=400&fit=crop',
         alt: 'CyberEye AI - Intelligent Crime Detection System',
         tags: ['Python', 'YOLO11', 'FastAPI', 'AI Agent'],
@@ -325,16 +342,17 @@ const projectsData = [
         category: 'fullstack',
         image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop',
         alt: 'Localhost Live - Share localhost as a Public HTTPS Link',
-        tags: ['Node.js', 'Express', 'Cloudflare Tunnel', 'WebSocket'],
+        tags: ['Node.js', 'Cloudflare Tunnel', 'Cloudflare Workers', 'WebSocket'],
         title: 'Localhost Live — localhost to Public URL',
-        description: `A self-hosted ngrok alternative: paste localhost:3000 into a local web panel and get a
-            public HTTPS link in seconds, with Copy / QR / Share. It auto-downloads cloudflared and supports
-            three providers — free Cloudflare Quick Tunnels, permanent subdomains on your own domain via
-            Named Tunnels, and a self-hosted WebSocket relay. WebSocket/HMR, uploads, and POST all pass
-            through, and the Express + SSE panel has CSRF guards and end-to-end tests.`,
-        overlay: [{ type: 'github', url: 'https://github.com/riadrayhan/localhost-to-live-url' }],
-        btnUrl: 'https://github.com/riadrayhan/localhost-to-live-url',
-        btnText: 'View Project'
+        description: `A free ngrok alternative, live at firecrewai.com: type your localhost address, press Get
+            live link, and get a public HTTPS URL with Copy / QR / Share — no signup. On Windows the site
+            opens a one-click desktop app (a Node single executable registered as a localhostlive://
+            handler); on macOS/Linux it runs through a single npx command. Under the hood it auto-downloads
+            cloudflared and supports Cloudflare Quick Tunnels, permanent subdomains via Named Tunnels, and a
+            self-hosted WebSocket relay — HMR, uploads, and POST all pass through.`,
+        overlay: [{ type: 'external', url: 'https://firecrewai.com' }],
+        btnUrl: 'https://firecrewai.com',
+        btnText: 'Visit Live Site'
     },
 
     // ----- More projects -----
@@ -624,6 +642,10 @@ function renderProjectCard(project) {
                 <i class="fas fa-lock"></i>
            </span>`;
 
+    const badgeHtml = project.badge
+        ? `<span class="project-badge"><i class="${project.badge.icon}"></i>${project.badge.label}</span>`
+        : '';
+
     const tagsHtml = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
 
     const btnHtml = project.btnUrl
@@ -640,6 +662,7 @@ function renderProjectCard(project) {
         <div class="project-card${project.featured ? ' featured' : ''}" data-category="${project.category}">
             <div class="project-image">
                 <img src="${project.image}" alt="${project.alt}">
+                ${badgeHtml}
                 <div class="project-overlay">${overlayHtml}</div>
             </div>
             <div class="project-content">
